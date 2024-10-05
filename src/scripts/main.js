@@ -1,5 +1,11 @@
 // Execute o arquivo com o comando: "node .\src\scripts\main.js";
-const div = "--------------------------------------------";
+function divisoria(texto) {
+    const div = "--------------------------------------------";
+
+    console.log(div);
+    console.log(texto);
+    console.log(div);
+}
 // Criação de Objetos - Primeira Maneira
 // A Constante é um Objeto Literal
 const carroDoJoao = {
@@ -24,16 +30,14 @@ const carroDaMaria = {
 }
 
 // Criação de Objetos - Segunda Maneira
-console.log(div);
-console.log("Criação de Objetos - Segunda Maneira");
-console.log(div);
+divisoria("Criação de Objetos - Segunda Maneira");
 // É insustentável criar os objetos duplicando o código, como no exemplo acima;
 // O correto é através de funções construtoras;
 // Os nomes de Funções Construtoras, por convenção, devem ser iniciadas com a primeira letra em CAIXA ALTA;
 function Carro(modelo, marca, anoModelo, anoFabricacao) {
     // Para criação de um atributo se faz o uso do "this";
     // O "this", neste exemplo, faz referência ao Carro;
-    // Então: this(Carro).modelo é igual ao (modelo informado);
+    // Lê-se: this(Carro).modelo é igual ao (modelo informado);
     this.modelo = modelo;
     this.marca = marca;
     this.anoModelo = anoModelo;
@@ -54,9 +58,7 @@ console.log(carroDoJoao2);
 console.log(carroDoMaria2);
 
 // Como fazer a verificação dos tipos de dados
-console.log(div);
-console.log("Verificação dos Tipos de Dados");
-console.log(div);
+divisoria("Verificação dos Tipos de Dados");
 
 const nome = "eduardo";
 const idade = 19;
@@ -80,16 +82,14 @@ console.log(typeof conhecimentos);
 console.log(typeof pessoa);
 console.log(typeof carroDoMaria2);
 
-console.log(div);
-console.log("Verificação dos Tipos de Instancias");
-console.log(div);
+divisoria("Verificação dos Tipos de Instancias");
 // Porém, o JavaScript, por padrão, não reconhece os tipos customizados
 // criados a partir de Funções Construtoras;
 // Para isto, utilizamos a palavra reservada "instanceof";
 // O "carroDoMaria2" é uma Instancia de "Carro";
 // O "instanceof" é utilizado para a verificação de tipos de Instancia (Por Comparação);
 
-// Então: console.log(carroDoMaria2(objeto) instanceof(é uma instancia de?) (Tipo de Dado (Nome de um Construtor, String, Array, etc.)));
+// Lê-se: console.log(carroDoMaria2(objeto) instanceof(é uma instancia de?) (Tipo de Dado (Nome de um Construtor, String, Array, etc.)));
 // Por ser uma comparação os retornos serão True ou False, como no Exemplo a seguir;
 console.log(carroDoMaria2 instanceof Carro);
 // carrodaMaria2 é uma instancia de Carro, então True;
